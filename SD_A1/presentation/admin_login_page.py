@@ -1,11 +1,13 @@
 from PyQt5.QtWidgets import QMainWindow, QLabel, QLineEdit, QPushButton, QVBoxLayout, QWidget
 from PyQt5.QtGui import QFont
-from model.user_repository import UserRepository
+
 import base64
+import sys
+
+from model.user_repository import UserRepository
 from presentation.admin_page import AdminPage
 from model.user import User
 from logic.controller import Controller
-import sys
 
 class AdminLoginPage(QMainWindow):
     def __init__(self):

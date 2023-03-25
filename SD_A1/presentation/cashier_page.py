@@ -1,9 +1,12 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QTableWidget, QTableWidgetItem
+
 from model.show import Show
 from model.show_repository import ShowRepository
 from logic.controller import Controller
+
 import sys
+
 from datetime import datetime
 
 class CashierPage(QWidget):
@@ -15,8 +18,6 @@ class CashierPage(QWidget):
 
         # Create the main layout
         main_layout = QVBoxLayout()
-
-        # self.show_repo = ShowRepository()
 
         # Create the table widget for the shows
         self.table_widget = QTableWidget()

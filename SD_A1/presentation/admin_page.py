@@ -1,12 +1,15 @@
 from PyQt5.QtCore import Qt, QDate
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFormLayout, QDateEdit, QSpinBox, QDialogButtonBox, QDialog, QPushButton, QTableWidget, QTableWidgetItem, QFileDialog, QMessageBox, QLineEdit
+
 from model.user import User
 from model.show import Show
 from model.show_repository import ShowRepository
 from model.user_repository import UserRepository
 from logic.controller import Controller
+
 import csv
 import sys
+
 from datetime import datetime
 
 class AdminPage(QWidget):

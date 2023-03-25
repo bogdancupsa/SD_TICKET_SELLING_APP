@@ -1,11 +1,13 @@
 from PyQt5.QtWidgets import QMainWindow, QLabel, QLineEdit, QPushButton, QVBoxLayout, QWidget
 from PyQt5.QtGui import QFont
-from model.user_repository import UserRepository
-import base64
-from presentation.cashier_page import CashierPage
+
 from model.user import User
+from model.user_repository import UserRepository
+from presentation.cashier_page import CashierPage
 from logic.controller import Controller
+
 import sys
+import base64
 
 class CashierLoginPage(QMainWindow):
     def __init__(self):
