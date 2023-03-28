@@ -12,12 +12,12 @@ class TestController(unittest.TestCase):
 
     # test get_user
     def test_get_user(self):
-        # Create a user and add it to the database
+        # create a user and add it to the database
         user = User("testuser", "password", "admin")
         user_repository = UserRepository()
         user_repository.add_user(user)
 
-        # Call the get_user method and check if it returns the correct user object
+        # call the get_user method and check if it returns the correct user object
         retrieved_user = user_repository.get_user("testuser")
         assert retrieved_user == user
     

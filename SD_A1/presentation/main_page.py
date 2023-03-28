@@ -9,42 +9,42 @@ class MainPage(QMainWindow):
         self.setWindowTitle("Festival Ticket Selling App")
         self.setGeometry(300, 300, 400, 200)
 
-        # Create the title label
+        # create the title label
         title_label = QLabel("Festival Ticket Selling App")
         title_label.setFont(QFont("Arial", 18))
 
-        # Create the admin and cashier buttons
+        # create the admin and cashier buttons
         admin_button = QPushButton("Admin Login")
         cashier_button = QPushButton("Cashier Login")
 
-        # Create the horizontal layout for the buttons
+        # create the horizontal layout for the buttons
         button_layout = QHBoxLayout()
         button_layout.addWidget(admin_button)
         button_layout.addWidget(cashier_button)
 
-        # Create the vertical layout for the page
+        # create the vertical layout for the page
         page_layout = QVBoxLayout()
         page_layout.addWidget(title_label)
         page_layout.addLayout(button_layout)
 
-        # Create the stacked widget and add the pages
+        # create the stacked widget and add the pages
         self.stacked_widget = QStackedWidget()
         self.admin_login_page = AdminLoginPage()
         self.cashier_login_page = CashierLoginPage()
-        self.stacked_widget.addWidget(self.admin_login_page)
+        self.stacked_widget.addWidget(self.admin_login_page)           
         self.stacked_widget.addWidget(self.cashier_login_page)
 
-        # Add the stacked widget to the layout
+        # add the stacked widget to the layout
         page_layout.addWidget(self.stacked_widget)
 
-        # Create the central widget for the page
+        # create the central widget for the page
         central_widget = QWidget()
         central_widget.setLayout(page_layout)
 
-        # Set the central widget for the main window
+        # set the central widget for the main window
         self.setCentralWidget(central_widget)
 
-        # Connect the button signals to the slot functions
+        # connect the button signals to the slot functions
         admin_button.clicked.connect(self.show_admin_login_page)
         cashier_button.clicked.connect(self.show_cashier_login_page)
 
